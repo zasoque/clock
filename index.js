@@ -65,10 +65,10 @@ function updateTime() {
     const mathHour = convert % 1 * 8 % 1 * 22 % 1 * 24;
     const mathDay = convert % 1 * 8 % 1 * 22;
     const mathMonth = convert % 1 * 8;
-    minutes.style.transform = `translate(250px, 250px) rotate(${360 / 60 * mathMinute}deg) translate(-250px, -250px)`;
-    hours.style.transform = `translate(250px, 250px) rotate(${360 / 24 * mathHour}deg) translate(-250px, -250px)`;
-    days.style.transform = `translate(250px, 250px) rotate(${360 / 22 * mathDay}deg) translate(-250px, -250px)`;
-    months.style.transform = `translate(250px, 250px) rotate(${360 / 8 * mathMonth}deg) translate(-250px, -250px)`;
+    minutes.style.transform = `translate(250px, 250px) rotate(${360 / 60 * mathMinute + 180}deg) translate(-250px, -250px)`;
+    hours.style.transform = `translate(250px, 250px) rotate(${360 / 24 * mathHour + 180}deg) translate(-250px, -250px)`;
+    days.style.transform = `translate(250px, 250px) rotate(${360 / 22 * mathDay + 180}deg) translate(-250px, -250px)`;
+    months.style.transform = `translate(250px, 250px) rotate(${360 / 8 * mathMonth + 180}deg) translate(-250px, -250px)`;
 }
 
 function padZero(num) {
@@ -92,7 +92,7 @@ function createTicks(svg, centerX, centerY, radius, tickLength, count) {
         line.setAttribute("y1", y1);
         line.setAttribute("x2", x2);
         line.setAttribute("y2", y2);
-        line.setAttribute("stroke", "black");
+        line.setAttribute("stroke", "var(--black)");
         group.appendChild(line);
     }
 
