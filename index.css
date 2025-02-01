@@ -1,0 +1,10 @@
+.clock {
+    margin: auto;
+    display: block;
+}
+
+.clock-label {
+    text-align: center;
+    font-family: "Pretendard", sans-serif;
+    font-variant: tabular-nums;
+}
