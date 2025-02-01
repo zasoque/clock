@@ -16,3 +16,17 @@ body {
     font-family: "Pretendard", sans-serif;
     font-variant: tabular-nums;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --black: #f7f7f9;
+        --white: #19191e;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .clock {
+        width: 360px;
+        height: 360px;
+    }
+}
